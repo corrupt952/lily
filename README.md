@@ -9,6 +9,5 @@ Requiments
 
 Run
 ---
-1. `docker build --tag lily .`
-2. `bundle install`
-3. `bundle exec ruby app.rb`
+1. `bundle install`
+2. `bundle exec ruby app.rb`

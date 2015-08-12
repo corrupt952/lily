@@ -16,7 +16,7 @@ post '/run' do
   content_type :json
   uuid = SecureRandom.uuid
   File.write("./tmp/#{uuid}.rb", params[:code])
-  out = `sudo docker run -v #{File.absolute_path('./tmp')}:/home/work --rm --tty lily #{uuid}.rb`
+  out = `docker run -v #{File.absolute_path('./tmp')}:/home/work --rm --tty corrupt952/lily #{uuid}.rb`
   File.delete("./tmp/#{uuid}.rb")
   { out: out }.to_json
 end
